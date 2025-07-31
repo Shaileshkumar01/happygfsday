@@ -212,10 +212,22 @@
             color: #ffeb3b;
         }
 
-        .time {
+        /* .time {
             font-size: 1.5rem;
             font-weight: bold;
-        }
+        } */
+
+        .time {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+   .date {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+   }
 
         .section {
             margin: 60px 0;
@@ -478,11 +490,11 @@
             position: relative;
         }
 
-        .photo-card:hover {
+        /* .photo-card:hover {
             transform: scale(1.05) rotate(2deg);
-        }
+        } */
 
-        .photo-placeholder {
+        /* .photo-placeholder {
             height: 200px;
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             display: flex;
@@ -491,8 +503,33 @@
             color: white;
             font-size: 1.2rem;
             text-align: center;
-        }
+        } */
+        .photo-real {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+}
 
+.photo-card:hover .photo-real {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 15px 15px;
+    font-size: 0.9rem;
+}
+
+.photo-placeholder {
+    display: none; /* Hide the placeholder divs */
+}
+
+
+        
         /* Easter Eggs */
         .easter-egg {
             position: absolute;
@@ -690,18 +727,18 @@
             <p class="subtitle">Aahana & Krish - Two months of pure magic ✨</p>
             
             <!-- Time Zones -->
-            <div class="timezone-container">
-                <div class="timezone">
-                    <h3>Your Time 🌸</h3>
-                    <div class="time" id="herTime">Loading...</div>
-                    <div>Gurugram</div>
-                </div>
-                <div class="timezone">
-                    <h3>My Time 💙</h3>
-                    <div class="time" id="myTime">Loading...</div>
-                    <div>Your City</div>
-                </div>
-            </div>
+    <div class="timezone-container">
+    <div class="timezone">
+        <h3>Your Time 🌸</h3>
+        <div class="time" id="herTime">Loading...</div>
+        <div>Kathmandu, Nepal</div>
+    </div>
+    <div class="timezone">
+        <h3>My Time 💙</h3>
+        <div class="time" id="myTime">Loading...</div>
+        <div>Gurugram, India</div> <!-- Replace with your actual city -->
+    </div>
+    </div>
         </header>
 
         <!-- Daily Message -->
@@ -715,7 +752,7 @@
             <h2>Until We're Together Again 💕</h2>
             <div class="countdown-container">
                 <div class="countdown-item">
-                    <span class="countdown-number" id="meetDays">30</span>
+                    <span class="countdown-number" id="meetDays">180+</span>
                     <span>Days</span>
                 </div>
                 <div class="countdown-item">
@@ -837,15 +874,15 @@
             <h2>Days Since We Started This Journey 💝</h2>
             <div class="countdown-container">
                 <div class="countdown-item">
-                    <span class="countdown-number" id="days">60</span>
+         <span class="countdown-number" id="days">68</span> 
                     <span>Days Together</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="countdown-number" id="messages">847</span>
+                    <span class="countdown-number" id="messages">800+</span>
                     <span>Sweet Messages</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="countdown-number" id="calls">23</span>
+                    <span class="countdown-number" id="calls">20+</span>
                     <span>Video Calls</span>
                 </div>
                 <div class="countdown-item">
@@ -855,58 +892,62 @@
             </div>
         </section>
 
-        <!-- Photo Gallery -->
-        <section class="section">
-            <h2>Our Beautiful Memories 📸</h2>
-            <div class="photo-gallery">
-                <div class="photo-card" onclick="addSparkles(event)">
-                    <div class="photo-placeholder">Our First Video Call 💕<br>That nervous smile when you first turned on your camera</div>
-                </div>
-                <div class="photo-card" onclick="addSparkles(event)">
-                    <div class="photo-placeholder">Your Morning Selfie 😍<br>Messy hair, sleepy eyes, absolutely perfect</div>
-                </div>
-                <div class="photo-card" onclick="addSparkles(event)">
-                    <div class="photo-placeholder">Us Being Silly 😄<br>That time you made funny faces to cheer me up after my coding bug</div>
-                </div>
-                <div class="photo-card" onclick="addSparkles(event)">
-                    <div class="photo-placeholder">Good Night Text Screenshot 🌙<br>"Sweet dreams my love" - saved forever in my heart</div>
-                </div>
-            </div>
-        </section>
+       <!-- Photo Gallery -->
+<section class="section">
+    <h2>Our Beautiful Memories 📸</h2>
+    <div class="photo-gallery">
+        <div class="photo-card" onclick="addSparkles(event)">
+            <img src="assets/images/img4.jpg" alt="Our First Video Call" class="photo-real">
+            <div class="photo-caption">Early stages of our relationship (I mean we are still in our early stage but yk what I mean) 💕<br>That nervous smile when you first turned on your camera</div>
+        </div>
+        <div class="photo-card" onclick="addSparkles(event)">
+            <img src="assets/images/img2.jpg" alt="Morning Selfie" class="photo-real">
+            <div class="photo-caption">Your birthday picture 😍<br>Maaa Goddd you killed it</div>
+        </div>
+        <div class="photo-card" onclick="addSparkles(event)">
+            <img src="assets/images/img3.jpg" alt="Being Silly Together" class="photo-real">
+            <div class="photo-caption">You eating sumthin 😄<br>Oh boy you look sooooo cuteeeee😽</div>
+        </div>
+        <div class="photo-card" onclick="addSparkles(event)">
+            <img src="assets/images/img1.png" alt="Good Night Text" class="photo-real">
+            <div class="photo-caption">Good Night Text Screenshot 🌙<br>Those lines are saved forever in my heart</div>
+        </div>
+    </div>
+</section>
 
         <section class="section">
             <h2>Why Aahana is My Everything 💖</h2>
             <div class="reasons-list">
                 <div class="reason-card">
                     <h3>Your Infectious Laugh 😊</h3>
-                    <p>The way you laugh at my terrible programming jokes. Even through the phone, it lights up my entire day and makes debugging worth it.</p>
+                    <p>The way your laughter dances through the phone, turning my ordinary days into something extraordinary. That sound could brighten even the cloudiest afternoon.</p>
                 </div>
                 <div class="reason-card">
-                    <h3>Your 3 AM Support 💌</h3>
-                    <p>When I'm stressed about assignments, you stay up just to text me encouragement. "You got this, my coding genius!" - saved my sanity so many times.</p>
+                    <h3>Your Midnight Comfort 💌</h3>
+                    <p>When the world feels heavy and sleep won't come, your words wrap around me like a warm blanket. "I believe in you"(although we dont talk much at night time but whenever i feel low I think of you) - the simplest spell that always mends my worries.</p>
                 </div>
                 <div class="reason-card">
-                    <h3>Your Cute Morning Voice ❤️</h3>
+                    <h3>Your Sleepy Morning Voice ❤️</h3>
                     <p>That sleepy "Good morning baby" voice note you send. I've probably listened to each one a hundred times.</p>
                 </div>
                 <div class="reason-card">
-                    <h3>How You Get My Weird World 🤗</h3>
+                    <h3>Your Long-Distance Grace 💕</h3>
                     <p>You actually listen when I explain recursion or get excited about clean code. You make me feel heard and understood.</p>
                 </div>
                 <div class="reason-card">
                     <h3>Your Patience With Distance 💕</h3>
-                    <p>Bad internet, timezone confusion, missed calls - you handle it all with grace. "We'll make it work" is your superpower.</p>
+                    <p>Frozen screens, echoing delays, conversations that stutter - you turn technological chaos into patience with that "we'll figure it out" smile I can hear through the static.</p>
                 </div>
                 <div class="reason-card">
                     <h3>Just Being You, Aahana ✨</h3>
-                    <p>Your favorite emoji is 🥺, you send me food pics to make me jealous, you fall asleep during movies - every little thing about you is perfect.</p>
+                    <p>The expressions that you make while we are on call, the way you sing songs, and omg I dont know much about poetry but lady youre amazing with it, theres so much about you that my words cant even express.</p>
                 </div>
             </div>
         </section>
 
         <div style="text-align: center; font-size: 1.8rem; margin: 60px 0; padding: 40px; background: rgba(255,255,255,0.1); border-radius: 20px; backdrop-filter: blur(10px);">
-            <p>Aahana, these two months have been the best of my life. Every bug in my code, every late night study session, every moment is better because I know you're thinking of me too. I love you more than all the lines of code I'll ever write! 💕</p>
-            <p style="margin-top: 20px; font-style: italic;">- Your devoted boyfriend, Krish 💙</p>
+            <p>Aahana, these two months with you have been pure magic. Every sunrise we've shared (even across the miles), every conversation, every moment is brighter because I know you're in my life. I love you more than words could ever express. 💕</p>
+            <p style="margin-top: 20px; font-style: italic;">- Forever yours, Krish 💙</p>
         </div>
 
         <button class="video-button" onclick="showVideo()">
@@ -959,6 +1000,10 @@
             </video>
         </div>
     </div>
+
+
+
+    
 
     <script>
         // Daily messages array
@@ -1081,22 +1126,47 @@
         }
 
         // Music player
-        let musicPlaying = false;
-        function toggleMusic() {
-            const btn = document.getElementById('playBtn');
-            if (musicPlaying) {
+    let musicPlaying = false;
+    let bgMusic = null; // This will hold our audio object
+
+    function toggleMusic() {
+    const btn = document.getElementById('playBtn');
+    
+    if (musicPlaying) {
+        // Pause the music
+        if (bgMusic) {
+            bgMusic.pause();
+        }
+        btn.textContent = '🎵';
+        musicPlaying = false;
+        console.log('Music paused');
+    } else {
+        // Play the music
+        if (!bgMusic) {
+            // Create audio object if it doesn't exist
+            bgMusic = new Audio('assets/audio/song.mp3');
+            bgMusic.loop = true; // Make it loop
+            bgMusic.volume = 0.7; // Set volume to 70%
+            
+            // Handle when song ends (though it loops)
+            bgMusic.addEventListener('ended', function() {
                 btn.textContent = '🎵';
                 musicPlaying = false;
-                // Stop music here
-                console.log('Music stopped');
-            } else {
+            });
+        }
+        
+        bgMusic.play()
+            .then(() => {
                 btn.textContent = '⏸️';
                 musicPlaying = true;
-                // Play music here
-                console.log('Playing your song...');
-                alert('🎵 Playing "our song" - replace this with actual audio!');
-            }
-        }
+                console.log('Playing our song...');
+            })
+            .catch(error => {
+                console.error('Error playing music:', error);
+                alert('Could not play the song. Please interact with the page first.');
+            });
+    }
+}
 
         // Love letters
         function openLetter(letterNum) {
@@ -1111,17 +1181,28 @@
         }
 
         // Voice messages
-        function playVoiceMessage(msgNum) {
-            const messages = [
-                "Good morning my beautiful girlfriend! Hope you have the most amazing day!",
-                "I love you so so much Aahana! You mean everything to me!",
-                "You make me the happiest person alive, thank you for being you!",
-                "Sweet dreams my love, can't wait to talk to you tomorrow!"
-            ];
-            
-            alert(messages[msgNum - 1]);
-            addSparkles({clientX: Math.random() * window.innerWidth, clientY: Math.random() * window.innerHeight});
-        }
+        // Voice messages
+    function playVoiceMessage(msgNum) {
+    // Create audio object
+    const audio = new Audio();
+    
+    // Map message numbers to your audio files
+    const voiceMessages = {
+        1: 'assets/audio/gm.mp3',      // Good Morning
+        2: 'assets/audio/ily.mp3',     // I Love You
+        3: 'assets/audio/happy.mp3',      // You Make Me Happy (using same as good morning - change if you have different file)
+        4: 'assets/audio/sd.mp3'       // Sweet Dreams
+    };
+    
+    // Set the audio source
+    audio.src = voiceMessages[msgNum];
+    
+    // Play the audio
+    audio.play().catch(e => console.log("Audio play failed:", e));
+    
+    // Add visual feedback
+    addSparkles({clientX: Math.random() * window.innerWidth, clientY: Math.random() * window.innerHeight});
+    }
 
         // Bucket list
         function toggleBucketItem(item) {
@@ -1244,6 +1325,93 @@
         document.querySelectorAll('.section').forEach((section, index) => {
             section.style.animationDelay = ((index * 0.2) + 4) + 's';
         });
+
+
+
+        // Lightbox functionality
+document.querySelectorAll('.photo-real').forEach(img => {
+    img.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent sparkles from triggering
+        
+        const lightbox = document.createElement('div');
+        lightbox.style.position = 'fixed';
+        lightbox.style.top = '0';
+        lightbox.style.left = '0';
+        lightbox.style.width = '100%';
+        lightbox.style.height = '100%';
+        lightbox.style.backgroundColor = 'rgba(0,0,0,0.9)';
+        lightbox.style.display = 'flex';
+        lightbox.style.justifyContent = 'center';
+        lightbox.style.alignItems = 'center';
+        lightbox.style.zIndex = '1000';
+        lightbox.style.cursor = 'zoom-out';
+        
+        const lightboxImg = document.createElement('img');
+        lightboxImg.src = this.src;
+        lightboxImg.style.maxWidth = '90%';
+        lightboxImg.style.maxHeight = '90%';
+        lightboxImg.style.borderRadius = '10px';
+        
+        lightbox.appendChild(lightboxImg);
+        document.body.appendChild(lightbox);
+        
+        lightbox.addEventListener('click', () => {
+            document.body.removeChild(lightbox);
+        });
+    });
+});
+
+
+
+function updateTimes() {
+    // Get current India time (UTC+5:30)
+    const indiaTime = new Date();
+    
+    // Calculate Nepal time (India time + 15 minutes)
+    const nepalTime = new Date(indiaTime.getTime() + 15 * 60 * 1000);
+    
+    // Format both times
+    const options = {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+    };
+    
+    document.getElementById('myTime').textContent = indiaTime.toLocaleTimeString('en-US', options);
+    document.getElementById('herTime').textContent = nepalTime.toLocaleTimeString('en-US', options);
+}
+
+// Update immediately and every second
+updateTimes();
+setInterval(updateTimes, 1000);
+
+
+
+function updateDaysTogether() {
+    // 1. Your proposal date (May 24, 2025)
+    const proposalDate = new Date(2025, 4, 24); // Months are 0-indexed (4 = May)
+    
+    // 2. Today's date
+    const today = new Date();
+    
+    // 3. Reset both to midnight for pure day count
+    const normalize = (date) => new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const days = Math.floor((normalize(today) - normalize(proposalDate)) / (1000 * 60 * 60 * 24));
+    
+    // 4. Update display (68 days as of July 31, 2025)
+    document.getElementById('days').textContent = days;
+    console.log(`Days since proposal: ${days} (${proposalDate.toDateString()} → ${today.toDateString()})`);
+}
+
+// Run on load and update daily
+updateDaysTogether();
+setInterval(updateDaysTogether, 12 * 60 * 60 * 1000); // Check twice daily
+
+
+
+// Temporary override (remove after testing)
+document.getElementById('days').textContent = 68;
     </script>
 </body>
 </html>
